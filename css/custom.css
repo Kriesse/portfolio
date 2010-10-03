@@ -1,0 +1,536 @@
+/* 
+
+Hello my tech-savvy friends. 
+
+Webdesign & CSS by
+Kristina Schneider
+kristinaschneider.com
+2009
+
+*/
+
+/* basics */
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,code,del,dfn,em,img,q,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;font-weight:inherit;font-style:inherit;font-size:100%;font-family:inherit;vertical-align:baseline;}
+body{line-height:1.5;}
+table{border-collapse:separate;border-spacing:0;}
+caption,th,td{text-align:left;font-weight:normal;}
+table,td,th{vertical-align:middle;}
+blockquote:before,blockquote:after,q:before,q:after{content:"";}
+blockquote,q{quotes:"" "";}
+a img{border:none;}
+
+html{font-size:100.01%;}
+body{font-size:75%;color:#222;background:#fff;font-family:"Helvetica Neue",Arial,Helvetica,sans-serif;}
+h1,h2,h3,h4,h5,h6{font-weight:normal;color:#111;}
+h1{font-size:3em;line-height:1;margin-bottom:0.5em;}
+h2{font-size:2em;margin-bottom:0.75em;}
+h3{font-size:1.5em;line-height:1;margin-bottom:1em;}
+h4{font-size:1.2em;line-height:1.25;margin-bottom:1.25em;}
+h5{font-size:1em;font-weight:bold;margin-bottom:1.5em;}
+h6{font-size:1em;font-weight:bold;}
+h1 img,h2 img,h3 img,h4 img,h5 img,h6 img{margin:0;}
+p{margin:0 0 1.5em;}
+p img.left{float:left;margin:1.5em 1.5em 1.5em 0;padding:0;}
+p img.right{float:right;margin:1.5em 0 1.5em 1.5em;}
+a:focus,a:hover{color:#000;}
+a{color:#009;text-decoration:underline;}
+blockquote{margin:1.5em;color:#666;font-style:italic;}
+strong{font-weight:bold;}
+em,dfn{font-style:italic;}
+dfn{font-weight:bold;}
+sup,sub{line-height:0;}
+abbr,acronym{border-bottom:1px dotted #666;}
+address{margin:0 0 1.5em;font-style:italic;}
+del{color:#666;}
+pre{margin:1.5em 0;white-space:pre;}
+pre,code,tt{font:1em 'andale mono','lucida console',monospace;line-height:1.5;}
+li ul,li ol{margin:0;}
+ul,ol{margin:0 1.5em 1.5em 0;padding-left:3.333em;}
+ul{list-style-type:disc;}
+ol{list-style-type:decimal;}
+caption{background:#eee;}
+.first{margin-left:0;padding-left:0;}
+.last{margin-right:0;padding-right:0;}
+.hide {display: none; }
+
+.container{width:950px;margin:0 auto;}
+.showgrid{background:url(src/grid.png) 55px 0;}
+.column,div.span-1,div.span-2,div.span-3,div.span-4,div.span-5,div.span-6,div.span-7,div.span-8,div.span-9,div.span-10,div.span-11,div.span-12,div.span-13,div.span-14,div.span-15,div.span-16,div.span-17,div.span-18,div.span-19,div.span-20,div.span-21,div.span-22,div.span-23,div.span-24{float:left;margin-right:10px;}
+.last,div.last{margin-right:0;}
+hr{background:#ddd;color:#ddd;clear:both;float:none;width:100%;height:.1em;margin:0 0 1.45em;border:none;}
+hr.space{background:#fff;color:#fff;visibility:hidden;}
+.clearfix:after,.container:after{content:"\0020";display:block;height:0;clear:both;visibility:hidden;overflow:hidden;}
+.clearfix,.container{display:block;}
+.clear{clear:both;}
+/* --- */
+
+body {
+  background: #E8E8E7 url(../img/bg_light.png) repeat fixed 3px 2px;
+  color: #000;
+  font-family: "Times New Roman", Times, serif;
+}
+
+a {
+  color: #000;
+}
+
+a:hover {
+  color: #000;
+}
+
+a:focus {
+  outline: none;
+  background: #E8E8E7;
+}
+
+/* Footer */
+
+.footer {
+  overflow: hidden;
+  width: 870px;
+  margin: 0 auto;
+  padding: 3em 45px;
+  background: #000;
+  color: #FFF;
+	font-family: "Helvetica Neue", Helvetica, "Myriad Pro", Arial, sans-serif;
+}
+
+.footer .col4 > p { 
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+
+.footer a:focus {
+  background: #444;  
+}
+
+em, i,
+.italic {
+  font-style: italic;
+  font-family: Didot, "Hoefler Text", Cambria, Utopia, "Liberation Serif", "Nimbus Roman No9 L Regular", Times, "Times New Roman", serif; 
+}
+
+strong, b {
+  text-transform: uppercase;
+}
+
+.center { text-align: center;}
+.right { text-align: right;}
+
+
+/* typography */
+h1, h2, h3, h4, h5, h6 {
+  color:#000;
+}
+h1 {
+  font-size: 2.5em; /* 30px */
+  line-height: 1;
+  margin-bottom: .5em;
+  text-align: center;
+  text-transform: uppercase;
+} 
+
+.logo span {
+  display: block;
+  padding-top: .3em;
+  
+  font-size: .5925em; /* 16px */
+  text-transform: none;
+  
+  font-style: italic;
+  font-family: Didot, "Hoefler Text", Cambria, Utopia, "Liberation Serif", "Nimbus Roman No9 L Regular", Times, "Times New Roman", serif;  
+}
+
+.logo a,
+.logo a.home,
+.logo a.home:hover {
+  height: 3.5em;
+  display: block;
+  padding-top: 0;
+  text-decoration: none;
+  background: transparent url(../img/eck_home.png) no-repeat 50% -210px;
+}
+
+.logo a:hover {
+  background: transparent url(../img/eck_home.png) no-repeat 50% 72px;
+}
+
+
+h2 {font-size:2em;margin-bottom:0.75em;}
+h3 {font-size:1.5em;line-height:1;margin-bottom:1em;}
+h4 {font-size:1.2em;line-height:1.25;margin-bottom:1.25em;}
+h5 {font-size:1em;font-weight:bold;margin-bottom:1.5em;}
+h6 {font-size:1em;font-weight:bold;}
+
+
+/* layout */
+
+.container {
+  width: 960px;
+  margin-top: 3em;
+  background-color: #FFF;
+}
+
+.container.info {
+  width: 960px;
+  height: 700px; 
+  background: #FFF url(../img/kriesse.jpg) no-repeat 0 0;
+}
+
+.header {
+  height: 8.5em;     /* 162px, davon 3em transparent */
+  overflow: hidden;
+  padding: 3em 0 5em 0;
+}
+
+.logo {
+  width: 328px; /* 4cols */
+  display: block;
+  float: left;
+  margin-left: 55px;
+  margin-right: 20px;
+}
+.nav {
+  width: 296px; /* 3cols + page-padding */
+  display: block;
+  float: left;
+  margin: 0 0 0 260px; /* 3cols - 1px (container-border) */
+  padding: 0;
+}
+.nav li {
+  float: left;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  line-height: 2;
+}
+.nav li a {
+  width: 67px; /* 1col */
+  height: 6.7em;
+  padding-right: 20px;
+  display: block;
+  font-size: 1.3333em; /* 16px */
+  text-decoration: none;
+  text-transform: uppercase;
+  background: transparent url(../img/eck.png) no-repeat -74px 3.3em;
+  text-align: center;
+}
+.nav li.active a {
+  background: transparent url(../img/eck.png) no-repeat -164px 3.3em;
+  text-decoration: none;
+}
+.nav li a:hover {
+  background: transparent url(../img/eck.png) no-repeat 18px 3.3em;
+  text-decoration: underline;
+}
+
+.main {
+  position: relative;
+  top: 0;
+  width: 850px;
+  overflow: hidden;
+  padding: 0 55px 6em 55px;
+  background: #FFF url('../img/marks.png') repeat-y scroll 0 0; 
+  min-height:500px;
+  height:auto !important;
+  height: 450px; /* 25 x 1.5em */
+}
+
+
+.welcome {
+  font-size: 4em;
+}
+
+/* blog page */
+
+.main.tumblr {
+  background: #FFF url('../img/marks.png') no-repeat scroll 0 0; 
+}
+
+/* about page */
+.info .main {
+  background-color: transparent;
+  overflow: visible;
+  padding-bottom: 1em
+}
+
+.slider {
+  width: 328px;
+}
+
+.slide {
+  width: 328px;
+  height: 468px;
+  overflow: hidden;
+  position: relative;
+}
+
+a.slider_nav {
+  display: block;
+  margin-bottom: 1.5em;
+  padding: 0 .5em 0 .4em;
+  background: #000;
+  color: #FFF;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  text-decoration: none;
+}
+
+a.slider_nav:hover,
+a.slider_nav :active {
+  background: #E8E8E7;
+  color: #000;
+}
+
+#about {
+  display: block;
+}
+
+#contact {
+  display: none;
+  position: relative;
+}
+
+.talk_link {
+  text-decoration: none;
+  cursor: help;
+}
+
+#arrow {
+  z-index: 1000;
+  width: 481px;
+  height: 431px;
+  position: absolute;
+  top: 9em;
+  left: 23em;
+  background: transparent url('../img/arrow.png') no-repeat 0 0; 
+  display: none;
+}
+
+.vcard {
+  background: #FFF;
+  margin: 7.5em 0 3em 0;
+  padding: 1.5em;
+}
+
+.adr {
+  margin: 0 0 0 157px;
+  padding-top: 1.5em;
+}
+
+
+#project_list {
+  padding: 0;
+  list-style: none;
+}
+#project_list li {
+}
+
+#project_list li a {
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+}
+#project_list li a:hover {
+  text-decoration: none;
+  font-weight: bold;
+}
+#project_list li a.active {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#project_list li a:focus {
+  outline: none;
+  font-weight: bold;
+  background: #FFF;
+}
+
+.project_container {
+  display: none;
+  margin-right: 0 !important;
+  background: #eaeaea;
+}
+
+.project_container h3 {
+  display: none;
+}
+
+.project_container img {
+  display: block;
+  border: 1px solid #999;
+  cursor: pointer;
+}
+
+.project_container img:hover {
+  border: 1px solid #000;
+  cursor: pointer;
+}
+
+.project_container img.disabled {
+  border: 1px solid #999;
+  cursor: default;
+}
+.no_border {
+  border: 1px solid #FFF !important;
+}
+
+.controls a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.controls a.disabled {
+  color: #ccc;
+  text-decoration: none;
+  cursor: default;
+}
+
+.footer h2, .footer h3, .footer h4, .footer h5 {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #FFF;
+}
+
+.border {
+  border-left: 1px solid #FFF;
+  border-right: 1px solid #FFF;
+  margin-left: -1px;
+  margin-right: 19px;
+}
+
+.credits {
+  background: transparent url('../img/heart.png') no-repeat scroll 50% 100%; 
+  padding-bottom: 2em;
+  margin-bottom: 2em;
+}
+
+
+.footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer a  {
+  color: #FFF;
+  font-style: italic;
+  font-family: Didot, "Hoefler Text", Cambria, Utopia, "Liberation Serif", "Nimbus Roman No9 L Regular", Times, "Times New Roman", serif; 
+  text-transform: uppercase;
+  text-decoration: none;
+  padding-left: .15em;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
+
+
+.impressum {
+  width: 960px;
+  margin: 1.5em auto;
+  color: #555;
+  text-align: center;
+}
+
+/* grid */
+/* 1col = 87px */
+
+.col {margin-right: 20px; float: left;}
+.col1 { width: 67px;}
+.col2 { width: 154px;}
+.col3 { width: 241px;}
+.col4 { width: 328px;}
+.col5 { width: 415px;}
+.col6 { width: 502px;}
+.col7 { width: 589px;}
+.col8 { width: 676px;}
+.col9 { width: 763px;}
+.col10 { width: 763px;}
+.last {margin-right: 0;}
+
+.gallery img {
+  display: none;
+}
+
+/* styles for tumblr */
+
+#navlist {
+  margin-left: 838px;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.date {
+  border-top: 1px solid #000;
+}
+.date h3 {
+  width: 176px;
+  margin-top: -4px;
+  padding-bottom: 4px;
+  background: #FFF;
+  text-transform: uppercase;
+}
+.date h3 {
+  width: 176px;
+  margin-top: -1px;
+  background: #FFF;
+  text-transform: uppercase;
+}
+
+.perma {
+  display: block;
+  padding: 1.5em 1em 0 1em;
+  background: transparent url('../img/eck_tiny.png') no-repeat 50% 2px;
+}
+
+.quote,
+div.audio,
+h2.link {
+	text-align: center;
+}
+
+.post {
+  margin-bottom: 12em;
+  clear: both;
+  overflow: hidden;
+}
+
+.post .post_content {
+  width: 502px;
+  float: left;
+  margin-left: 20px;
+}
+
+.post .post_meta {
+  width: 268px;
+  padding: 0 30px;
+  float: left;
+  text-align: center;
+}
+
+.post_navigation {
+  width: 502px;
+  float: left;
+  margin-left: 348px;
+}
+
+.post blockquote a {
+  color: #666;
+}
+
+.quote blockquote {
+	font-size: 2em;
+	margin: 0 0 .5em 0;
+	color: #000;
+}
+
+
+
+.tumblr_info {
+  background: transparent url('../img/heart.png') no-repeat scroll 50% 100%; 
+  padding-bottom: 2em;
+  margin-bottom: 6em;
+}

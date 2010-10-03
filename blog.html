@@ -1,0 +1,246 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <!-- DEFAULT COLORS -->
+    <meta name="color:Background" content="#222"/>
+    <meta name="color:Content Background" content="#fff"/>
+    <meta name="color:Title" content="#666"/>
+    <meta name="color:Description" content="#777"/>
+    <meta name="color:Nav Links" content="#44A3E2"/>
+    <meta name="color:Date" content="#ccc"/>
+    <meta name="color:Post Title" content="#444"/>    
+    <meta name="color:Text" content="#555"/>
+    <meta name="color:Inline Link" content="#111"/>
+    <meta name="color:Quote" content="#444"/>
+    <meta name="color:Quote Source" content="#666"/>
+    <meta name="color:Link Post" content="#666"/>
+    <meta name="color:Conversation Background 1" content="#f4f4f4"/>
+    <meta name="color:Conversation Background 2" content="#e8e8e8"/>
+    <meta name="color:Conversation Border" content="#555"/>
+    <meta name="color:Conversation Text" content="#000"/>
+    <meta name="color:Caption" content="#888"/>
+    <meta name="color:Content Decoration" content="#aaa"/>
+    <meta name="color:Footer" content="#eee"/>
+    <!-- END DEFAULT COLORS -->
+    
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <link rel="icon" href="{Favicon}"/>
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="{RSS}"/>
+    <title>Kristina Schneider | blog.kristinaschneider.com {block:PostSummary} - {PostSummary}{/block:PostSummary}</title>
+     <link rel="stylesheet" href="http://portfolio.kristinaschneider.com/css/print.css" type="text/css" media="print" />
+     <!--[if lt IE 8]>
+       <link rel="stylesheet" href="http://portfolio.kristinaschneider.com/css/ie.css" type="text/css" media="screen, projection" />
+     <![endif]-->
+
+     <link rel="stylesheet" href="http://portfolio.kristinaschneider.com/css/custom.css" type="text/css" media="screen, projection" />
+     <link rel="stylesheet" href="css/tumbl.css" type="text/css" media="screen, projection" />
+     
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-8774565-2");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</head>
+<body>
+
+<div id="container" class="container">
+  <div class="header">
+    <h1 class="logo">
+      <a href="http://kristinaschneider.com" title="home" class="home">
+        {Title} 
+        <br />
+        <span>Art Direction, Code &amp; Illustration</span>
+      </a>
+    </h1>
+    <ol class="nav">
+      <li class="work_nav"><a href="http://kristinaschneider.com/work.html" title="Selected works 2009/2008">Work</a></li>
+      <li class="about_nav"><a href="http://kristinaschneider.com/about.html" title="About me and contact">Info</a></li>
+      <li class="active blog_nav"><a href="http://blog.kristinaschneider.com" title="Blog">Blog</a></li>
+    </ol>
+    
+    <div id="navcontainer">
+      <ul id="navlist" class="col col1 last">
+        <li><a href="{RSS}">Feed</a></li>
+        <li><a href="/archive">Archive</a></li>
+      </ul>
+    </div>
+    
+  </div>
+
+  <div class="main tumblr">
+
+    {block:Posts}
+        {block:NewDayDate}
+            <div class="date">
+              <h3>{ShortMonth} {DayOfMonthWithZero}</h3>
+            </div>
+        {/block:NewDayDate}
+    
+        <div class="post">
+            {block:Regular}
+              <div class="post_meta">
+                {block:Title}<h2><a href="{Permalink}">{Title}</a></h2>{/block:Title}
+                <a href="{Permalink}" class="perma" title="Permanent link to this post"> Permalink</a>
+              </div>
+              <div class="post_content">
+                {Body}
+              </div>
+            {/block:Regular}
+            
+            {block:Photo}
+              <div class="post_meta">
+                {block:Caption}
+                    <div class="caption">{Caption}</div>
+                {/block:Caption}
+                <a href="{Permalink}" class="perma" title="Permanent link to this post"> Permalink</a>
+              </div>
+              <div class="post_content">
+                <div class="photo">
+                  {LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}"/>{LinkCloseTag}
+                </div>
+              </div>
+            {/block:Photo}
+            
+            {block:Quote}
+              <div class="post_meta">
+                <a href="{Permalink}" class="perma" title="Permanent link to this post"> Permalink</a>
+              </div>
+              <div class="post_content">
+                <div class="quote">
+                    <span class="quote">
+                        <big class="quote"><a href="{Permalink}">&#147;</a></big> {Quote}
+                    </span>
+                    {block:Source}<div class="source">&mdash; {Source}</div>{/block:Source}
+                </div>
+              </div>
+            {/block:Quote}
+            
+            {block:Link}
+              <div class="post_meta">
+                {block:Description}
+                  <div class="description">{Description}</div>
+                {/block:Description}
+                <a href="{Permalink}" class="perma" title="Permanent link to this post"> Permalink</a>
+              </div>
+              <div class="post_content">
+                <h2 class="link">
+                    <a href="{URL}" class="link" {Target}>{Name}</a>
+                </h2>
+              </div>
+            {/block:Link}
+            
+            {block:Conversation}
+              <div class="post_meta">
+                {block:Title}<h2><a href="{Permalink}">{Title}</a></h2>{/block:Title}
+                <a href="{Permalink}" class="perma" title="Permanent link to this post"> Permalink</a>
+              </div>
+              <div class="post_content">
+                <div class="conversation">
+                  <ul>
+                    {block:Lines}
+                      <li class="{Alt}">
+                        {block:Label}<span class="label">{Label}</span>{/block:Label}
+                        {Line}
+                      </li>
+                    {/block:Lines}
+                  </ul>
+                </div>
+              </div>
+            {/block:Conversation}
+            
+            {block:Audio}
+              <div class="post_meta">
+                {block:Caption}
+                    <div class="caption">{Caption}</div>
+                {/block:Caption}
+                <a href="{Permalink}" class="perma" title="Permanent link to this post"> Permalink</a>
+              </div>
+              <div class="post_content">
+                 <div class="audio">
+                    {AudioPlayerBlack}
+                  </div>
+              </div>
+            {/block:Audio}
+            
+            {block:Video}
+              <div class="post_meta">
+                {block:Caption}
+                    <div class="caption">{Caption}</div>
+                {/block:Caption}
+                <a href="{Permalink}" class="perma" title="Permanent link to this post"> Permalink</a>
+              </div>
+              <div class="post_content">
+                <div class="video">
+                    {Video-500}
+                </div>
+              </div>
+            {/block:Video}
+        </div>
+    {/block:Posts}
+
+    <div class="post_navigation">
+      {block:PreviousPage}
+        &larr; <a href="{PreviousPage}">newer</a> &nbsp;&nbsp;
+      {/block:PreviousPage}
+
+      {block:NextPage}
+        <a href="{NextPage}">older</a> &rarr;
+      {/block:NextPage}
+    </div>
+
+  </div>
+
+</div>
+
+  
+  <div class="footer">
+    <div class="col col4 center border">
+      <p class="tumblr_info">
+        {block:Description}
+          {Description}
+        {/block:Description}
+        <br />
+      </p>
+
+      <p>
+        subscribe via <a href="/rss">rss</a> &nbsp;/&nbsp;
+        powered by <a href="http://www.tumblr.com/" target="_blank">tumblr</a>
+      </p>
+    </div>
+    
+    <div class="col col3 right">
+      <h5>I like coworking.</h5>
+      <p>I work within a strong network of designers, developers, writers and all kinds of creative and generally great people. One good place to meet a few of them is at <a href="http://co-up.de" title="co-up.de">co.up coworking space</a>, where my desk is located, too. Come over and let's get some work done!</p>
+    </div>
+    
+    <div class="col col3 right last">
+    <h5>I like networking.</h5>
+    <ul class="right">
+      <li>follow me on <a href="http://twitter.com/kriesse" title="twitter">twitter</a></li>
+      <li>track me on <a href="http://www.dopplr.com/traveller/kriesse" title="dopplr">dopplr</a></li>
+      <li>see more photos on my <a href="http://www.flickr.com/photos/kriesse/" title="flickr">flickr</a></li>
+      <li>i <a href="http://dribbble.com/players/kriesse" title="dribbble">dribbble</a></li>
+      <li>i collect beauty on <a href="http://ffffound.com/home/kriesse/found/" title="ffffound">ffffound</a></li>
+      <li>listen to my radio on <a href="http://www.lastfm.de/user/kriesse" title="last.fm">last.fm</a></li>
+      <li>contact me via <a href="http://www.xing.com/profile/Kristina_Schneider5" title="xing">xing</a></li>
+      <li>i am also <a href="http://de.linkedin.com/in/kriesse" title="linkedin">linkedin</a></li>
+      <li>and i have a <a href="http://www.facebook.com/profile.php?id=825782113" title="facebook">facebook page</a></li>
+    </ul>  
+    </div>
+  </div>
+  
+  <p class="impressum">
+    Impressum: Kristina Schneider | c/o co-up coworking | Adalbertstraße 7-8 | 10999 Kreuzberg | E-Mail: mail@kristinaschneider.com
+  </p>
+    
+  
+</div>
+
+</body>
+</html>
